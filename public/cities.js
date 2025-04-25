@@ -1,0 +1,32 @@
+const cities = [
+    { label: "Wszystkie miasta", value: null }, { label: "Warszawa", value: "Warszawa" }, { label: "Kraków", value: "Kraków" }, { label: "Łódź", value: "Łódź" }, { label: "Wrocław", value: "Wrocław" }, { label: "Poznań", value: "Poznań" },
+    { label: "Gdańsk", value: "Gdańsk" }, { label: "Szczecin", value: "Szczecin" }, { label: "Bydgoszcz", value: "Bydgoszcz" }, { label: "Lublin", value: "Lublin" }, { label: "Białystok", value: "Białystok" },
+    { label: "Katowice", value: "Katowice" }, { label: "Gdynia", value: "Gdynia" }, { label: "Częstochowa", value: "Częstochowa" }, { label: "Radom", value: "Radom" }, { label: "Sosnowiec", value: "Sosnowiec" },
+    { label: "Toruń", value: "Toruń" }, { label: "Kielce", value: "Kielce" }, { label: "Gliwice", value: "Gliwice" }, { label: "Zabrze", value: "Zabrze" }, { label: "Bytom", value: "Bytom" },
+    { label: "Olsztyn", value: "Olsztyn" }, { label: "Bielsko-Biała", value: "Bielsko-Biała" }, { label: "Rzeszów", value: "Rzeszów" }, { label: "Ruda Śląska", value: "Ruda Śląska" }, { label: "Rybnik", value: "Rybnik" },
+    { label: "Tychy", value: "Tychy" }, { label: "Dąbrowa Górnicza", value: "Dąbrowa Górnicza" }, { label: "Opole", value: "Opole" }, { label: "Elbląg", value: "Elbląg" }, { label: "Płock", value: "Płock" },
+    { label: "Gorzów Wielkopolski", value: "Gorzów Wielkopolski" }, { label: "Wałbrzych", value: "Wałbrzych" }, { label: "Włocławek", value: "Włocławek" }, { label: "Zielona Góra", value: "Zielona Góra" }, { label: "Tarnów", value: "Tarnów" },
+    { label: "Chorzów", value: "Chorzów" }, { label: "Koszalin", value: "Koszalin" }, { label: "Legnica", value: "Legnica" }, { label: "Kalisz", value: "Kalisz" }, { label: "Grudziądz", value: "Grudziądz" },
+    { label: "Jaworzno", value: "Jaworzno" }, { label: "Słupsk", value: "Słupsk" }, { label: "Jastrzębie-Zdrój", value: "Jastrzębie-Zdrój" }, { label: "Nowy Sącz", value: "Nowy Sącz" }, { label: "Jelenia Góra", value: "Jelenia Góra" },
+    { label: "Konin", value: "Konin" }, { label: "Piła", value: "Piła" }, { label: "Inowrocław", value: "Inowrocław" }, { label: "Lubin", value: "Lubin" }, { label: "Mysłowice", value: "Mysłowice" },
+    { label: "Ostrołęka", value: "Ostrołęka" }, { label: "Zamość", value: "Zamość" }, { label: "Siemianowice Śląskie", value: "Siemianowice Śląskie" }, { label: "Siedlce", value: "Siedlce" }, { label: "Piotrków Trybunalski", value: "Piotrków Trybunalski" },
+    { label: "Gniezno", value: "Gniezno" }, { label: "Świdnica", value: "Świdnica" }, { label: "Przemyśl", value: "Przemyśl" }, { label: "Suwałki", value: "Suwałki" }, { label: "Ełk", value: "Ełk" },
+    { label: "Tarnowskie Góry", value: "Tarnowskie Góry" }, { label: "Tczew", value: "Tczew" }, { label: "Będzin", value: "Będzin" }, { label: "Pabianice", value: "Pabianice" }, { label: "Chełm", value: "Chełm" },
+    { label: "Starachowice", value: "Starachowice" }, { label: "Zgierz", value: "Zgierz" }, { label: "Tomaszów Mazowiecki", value: "Tomaszów Mazowiecki" }, { label: "Biała Podlaska", value: "Biała Podlaska" }, { label: "Ostrów Wielkopolski", value: "Ostrów Wielkopolski" },
+    { label: "Legionowo", value: "Legionowo" }, { label: "Świnoujście", value: "Świnoujście" }, { label: "Żory", value: "Żory" }, { label: "Puławy", value: "Puławy" }, { label: "Stalowa Wola", value: "Stalowa Wola" },
+    { label: "Wodzisław Śląski", value: "Wodzisław Śląski" }, { label: "Skierniewice", value: "Skierniewice" }, { label: "Mielec", value: "Mielec" }, { label: "Siemiatycze", value: "Siemiatycze" }, { label: "Knurów", value: "Knurów" },
+    { label: "Sopot", value: "Sopot" }, { label: "Kołobrzeg", value: "Kołobrzeg" }, { label: "Łomża", value: "Łomża" }, { label: "Nowa Sól", value: "Nowa Sól" }, { label: "Kędzierzyn-Koźle", value: "Kędzierzyn-Koźle" },
+    { label: "Otwock", value: "Otwock" }, { label: "Ciechanów", value: "Ciechanów" }, { label: "Żywiec", value: "Żywiec" }, { label: "Augustów", value: "Augustów" }, { label: "Lębork", value: "Lębork" },
+    { label: "Ostróda", value: "Ostróda" }, { label: "Bochnia", value: "Bochnia" }, { label: "Zakopane", value: "Zakopane" }, { label: "Świętochłowice", value: "Świętochłowice" }, { label: "Mińsk Mazowiecki", value: "Mińsk Mazowiecki" },
+    { label: "Czechowice-Dziedzice", value: "Czechowice-Dziedzice" }, { label: "Malbork", value: "Malbork" }, { label: "Kwidzyn", value: "Kwidzyn" }, { label: "Wołomin", value: "Wołomin" }, { label: "Wejherowo", value: "Wejherowo" },
+    { label: "Świdnik", value: "Świdnik" }, { label: "Brodnica", value: "Brodnica" }, { label: "Lubliniec", value: "Lubliniec" }, { label: "Krotoszyn", value: "Krotoszyn" }, { label: "Łask", value: "Łask" },
+    { label: "Dzierżoniów", value: "Dzierżoniów" }, { label: "Pszczyna", value: "Pszczyna" }, { label: "Żuromin", value: "Żuromin" }, { label: "Grajewo", value: "Grajewo" }, { label: "Oleśnica", value: "Oleśnica" },
+    { label: "Kościan", value: "Kościan" }, { label: "Nowy Targ", value: "Nowy Targ" }, { label: "Turek", value: "Turek" }, { label: "Brzeg", value: "Brzeg" }, { label: "Węgrów", value: "Węgrów" },
+    { label: "Głogów", value: "Głogów" }, { label: "Jarosław", value: "Jarosław" }, { label: "Swarzędz", value: "Swarzędz" }, { label: "Kraśnik", value: "Kraśnik" }, { label: "Sanok", value: "Sanok" },
+    { label: "Kościerzyna", value: "Kościerzyna" }, { label: "Cieszyn", value: "Cieszyn" }, { label: "Wieliczka", value: "Wieliczka" }, { label: "Chrzanów", value: "Chrzanów" }, { label: "Ząbki", value: "Ząbki" },
+    { label: "Płońsk", value: "Płońsk" }, { label: "Bolesławiec", value: "Bolesławiec" }, { label: "Dębica", value: "Dębica" }, { label: "Gostyń", value: "Gostyń" }, { label: "Olkusz", value: "Olkusz" },
+    { label: "Rawa Mazowiecka", value: "Rawa Mazowiecka" }, { label: "Sandomierz", value: "Sandomierz" }, { label: "Police", value: "Police" }, { label: "Zduńska Wola", value: "Zduńska Wola" }, { label: "Żary", value: "Żary" },
+    { label: "Łowicz", value: "Łowicz" }, { label: "Rypin", value: "Rypin" }, { label: "Nowy Dwór Mazowiecki", value: "Nowy Dwór Mazowiecki" }, { label: "Goleniów", value: "Goleniów" }, { label: "Zawiercie", value: "Zawiercie" }
+];
+
+export default cities;
